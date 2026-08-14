@@ -1,0 +1,566 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;  
+  font: 16px Arial;
+  background: #fff;
+  color: #111;
+}
+header, footer {
+  background: #111;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+}
+main { flex: 1;
+}
+
+/* Header */
+.cinema-name { font-size: 50px;
+               margin: 10px;
+}
+
+.nav-bar { list-style-type: none;
+           display: flex;
+           justify-content: center;
+           margin: 10px;
+           gap: 20px;
+}
+.nav-bar li { display: flex;
+              align-items: center;
+}
+.nav-bar li:last-child { margin-left: 30px;
+}
+.nav-bar a { color: #fff;
+             font-size: 18px;
+             transition: 0.3s;
+             text-decoration: none;
+}
+.nav-bar a:hover { color: #06f;
+}
+.nav-bar a.btn { padding: 6px 14px;
+                 border: 1px solid #fff;
+                 background-color: #000;
+                 text-decoration: none;
+}
+.nav-bar a.btn:hover { background-color: #666;
+                       color: #000;
+}
+
+/* Home page -- banner & gallery */
+.banner { display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin: 40px auto;
+}
+.banner-img { width: 80%;
+              max-width: 1000px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+              margin-top: 10px;
+}
+.gallery-box { text-align: center;
+               margin: 50px auto;
+               padding: 20px;
+               border: 1px solid #000;
+               border-radius: 10px;
+               max-width: 1000px;
+}
+.btn-browse { font-size: 30px;
+              font-weight: bold;
+              color: #000;
+              display: inline-block;
+              margin: 10px 0 10px 0;
+              text-decoration: none;
+}
+.btn-browse:hover { color: #06f;
+} 
+.posters { display: flex;
+           justify-content: center;
+           gap: 20px;
+           flex-wrap: wrap;
+           margin: 20px;
+}
+.poster { width: 150px;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Movies */
+.movie-nav { margin: 30px 30px;
+             list-style: none;
+             display: flex;
+             justify-content: flex-start;
+             gap: 20px;
+             padding: 0;
+}
+.movie-nav a { font-size: 20px;
+               color: #000000;
+               font-weight: bold;
+               padding: 6px 12px;
+               transition: 0.3s;
+               text-decoration: none;
+}
+.movie-nav a:hover { color: #06f;
+}
+.movie-nav a.active { color: #06f;
+}
+.movie-box { display: flex;
+             align-items: flex-start;
+             gap: 40px;
+             border: 1px solid #000;
+             border-radius: 5px;
+             padding: 20px 30px 20px 20px;
+             margin: 30px 40px;
+             max-width: 900px;
+}
+.movie-poster { width: 200px;
+                border-radius: 8px;
+}
+.movie-title { font-size: 30px;
+               margin-bottom: 20px;
+               color: #000000;
+}
+.movie-description { font-size: 16px;
+                     color: #555;
+                     line-height: 1.5;
+                     text-align: justify;
+}
+.btn-tickets { display: inline-block;
+               margin-top: 20px;
+               padding: 8px 14px;
+               border: 1px solid #000;
+               color: #000;
+               font-weight: bold;
+               border-radius: 3px;
+               transition: 0.3s;
+               text-decoration: none;
+}
+.btn-tickets:hover { background-color: #06f;
+                     color: #fff;
+}
+
+/* Tickets page -- for movie info */
+.tickets-movie { max-width: 900px;
+                 margin: 20px auto;
+                 padding: 20px;
+                 border: 1px solid #000;
+                 border-radius: 5px;
+                 background-color: #fff;
+}
+.tickets-overview { display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    margin-bottom: 15px;
+}
+.tickets-poster { width: 300px;
+}
+.tickets-details { flex: 1;
+                   display: flex;
+                   flex-direction: column; /* stack title + info vertically */
+}
+.tickets-title { font-size: 40px;
+                 color: #000;
+                 margin: 0 0 10px 0;
+}
+.tickets-info { display: flex;
+                gap: 20px;
+                font-size: 16px;
+                color: #555;
+}
+.tickets-info span::after { content: "|";
+                            margin-left: 20px;
+                            color: #555;
+}
+.tickets-info span:last-child::after { content: "";
+}
+
+.tickets-description { display: flex;
+                       justify-content: space-between;
+                       gap: 80px;
+                       margin: 10px auto;
+}
+.description-left { flex: 1.5;
+}
+.description-right { flex: 1;
+}
+.description-left th, .description-right th { color: #555;
+                                              font-size: 16px;
+                                              text-align: left;
+                                              vertical-align: top;
+                                              width: 150px;
+                                              padding: 10px 0px;
+                                              border: none;                                   
+}
+.description-left td, .description-right td { color: #000;
+                                              font-size: 16px;
+                                              text-align: left;
+                                              vertical-align: top;
+                                              padding: 10px 0px;
+                                              border: none;
+}
+.tickets-selection { max-width: 850px;
+                     margin: 40px auto;
+                     font-size: 16px;
+}
+
+/* Showtimes selection */
+.date-options { display: flex;
+                gap: 10px;
+                margin-bottom: 30px;
+                list-style: none;
+                padding: 0;
+}
+.date-options a { display: inline-block;
+                  padding: 20px 55px;
+                  font-size: 16px;
+                  border: 1px solid #444;
+                  background-color: #444;
+                  color: #ffffff;
+                  text-decoration: none;
+                  cursor: pointer;
+                  transition: 0.3s;
+}
+.date-options a:hover { background-color: #f13434;
+                        border: 1px solid #f13434;
+}
+.date-options a.active { background-color: #f13434;
+                         border: 1px solid #f13434;
+}
+.time-options { display: flex;
+                gap: 15px;
+                margin-bottom: 50px;
+}
+.time-options a.time-btn { padding: 10px 20px;
+                           font-size: 14px;
+                           color: #444;
+                           border: 1px solid #444;
+                           border-radius: 5px;
+                           background-color: #fff;
+                           text-decoration: none;
+                           cursor: pointer;
+                           transition: 0.3s;
+}
+.time-options a.time-btn:hover { background-color: #444;
+                                 color: #fff;
+}
+
+/* Seat selection */
+.selection-overview { display: flex;
+                      align-items: flex-start;
+                      gap: 40px;
+                      border: 1px solid #000;
+                      border-radius: 5px;
+                      padding: 20px 30px 20px 20px;
+                      margin: 30px auto;
+                      max-width: 700px;
+}
+.selection-poster{ width: 170px;
+                   border-radius: 8px;
+}
+.selection-description span { display: block;
+                              margin-bottom: 5px;
+                              font-size: 25px;
+                              font-weight: bold;
+}
+.seat-selection { text-align: center;
+                  margin: 40px auto;
+                  max-width: 500px;
+}
+.screen { background-color: #ccc;
+          color: #000;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 5px;
+          margin-bottom: 50px;
+          border-radius: 5px;
+}
+.seats-grid { display: flex;
+              flex-direction: column;
+              gap: 5px;
+              justify-content: center;
+}
+.row { display: flex;
+       justify-content: center;
+       gap: 5px;
+}
+.seat { width: 45px;
+        height: 40px;
+        font-size: 15px;
+        background-color: #eee;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+}
+.seat:hover { background-color: #ddd;
+}
+.seat.selected { background-color: #FFDE21;
+                 color: #000;
+}
+.seat.unavailable { background-color: #444;
+                    color: white;
+                    cursor: not-allowed;
+}
+
+.seat-legend { margin-top: 50px;
+               text-align: center;
+               border: 1px solid #000;
+               border-radius: 10px;
+               padding: 20px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               gap: 20px;
+}
+.seat-legend h4 { margin: 0;
+                  font-size: 17px;
+}
+.legend-items { display: flex;
+                justify-content: center;
+                gap: 25px;
+}
+.legend-items div { display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 17px;
+}
+.seat-legend span { display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 3px;
+}
+.available { background-color: #eee; }
+.selected { background-color: #ffde21; }
+.unavailable { background-color: #444; }
+
+/* Booking table */
+.seat-summary { margin: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+}
+.seat-summary h3 { margin-bottom: 20px;
+                   font-size: 25px;
+}
+.seat-summary table { width: 800px;
+                      text-align: center;
+                      border: 1px solid #fff;
+                      border-spacing: 0;
+                      background-color: #ccc;
+                      color: #000;
+}
+td, th { padding: 25px;
+         border: 1px #fff solid;
+         font-size: 20px;
+}
+
+.checkout-button { margin-top: 10px;
+                   margin-left: 651px;
+                   padding: 15px 30px;
+                   font-size: 15px;
+                   border: 1px solid #444;
+                   background-color: #444;
+                   color: #ffffff;
+                   text-decoration: none;
+                   text-transform: uppercase;
+                   cursor: pointer;
+}
+.checkout-button a:hover { background-color: #f13434;
+                           border: 1px solid #f13434;
+}
+input[readonly] { border: none;
+                  background: transparent;
+                  color: #000;
+                  font-size: 20px;
+                  text-align: center;
+                  pointer-events: none;
+}
+
+/* Booking Confirmation page */
+.booking-header { margin: 40px 40px 0px 40px;
+}
+.booking-details { display: flex;
+                   align-items: flex-start;
+                   gap: 40px;
+                   border: 1px solid #fff;
+                   padding: 20px 30px 20px 20px;
+                   margin: 30px 40px;
+                   max-width: 700px;
+}
+.booking-poster { width: 220px;
+                  border-radius: 8px;
+}
+.booking-description span { display: block;
+                            margin-bottom: 5px;
+                            font-size: 20px;         
+}
+.return-btn { margin: 10px 0px 40px 40px;
+              padding: 15px 30px;
+              font-size: 15px;
+              border: 1px solid #444;
+              background-color: #444;
+              color: #ffffff;
+              text-decoration: none;
+              text-transform: uppercase;
+              cursor: pointer;
+}
+.return-btn:hover { background-color: #666;
+                    border: 1px solid #666;
+}
+
+/* Login, Sign Up, Logout */
+.login-signup { margin: 40px 40px 0px 40px;
+}
+form label { display: block;
+             font-size: 17px;
+             font-weight: bold;
+             margin-bottom: 5px;
+}
+.login-signup form input[type="text"], form input[type="password"], form input[type="email"] 
+{ width: 200px;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="email"]:focus
+{ border-color: #007bff;
+  outline: none;
+}
+form input[type="submit"].btn { background-color: #007bff;
+                                color: white;
+                                border: none;
+                                padding: 10px 15px;
+                                margin-top: 5px;
+                                font-size: 15px;
+                                font-weight: bold;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease;
+}
+form input[type="submit"].btn:hover { background-color: #0056b3;
+}
+.bottom { margin-top: 25px;
+          font-size: 17px;
+          color: #666;
+}
+.bottom a { color: #007bff;
+            text-decoration: none;
+            margin: 0px 5px 0px 5px;
+}
+.bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Saved bookings page */
+.booking-list { display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 40px;
+                padding: 10px 30px 20px 20px;
+                margin: 30px 40px;
+                max-width: 1300px;
+}
+.booking-card { border: 1px solid #000;
+                border-radius: 8px;
+                padding: 20px 20px 0px 20px;
+                min-height: 470px;
+                width: 215px;
+}
+.mybooking-poster { height: 270px;
+                    border-radius: 8px;
+}
+
+/* Admin page */
+.admin-body { margin: 40px;
+}
+.admin-body h2 { margin-bottom: 5px;
+}
+
+.admin-body .admin-wrap { display: grid;
+                          grid-template-columns: 0.9fr 1.1fr;
+                          gap: 50px;
+                          align-items: start;
+}
+.admin-body .admin-row { display: grid;
+                         grid-template-columns: 0.8fr 1.2fr;
+                         gap: 35px;
+}
+.admin-body table { width: 100%;
+                    border-collapse: collapse;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+}
+.admin-body th, .admin-body td { border: 1px solid #eee;
+                                 padding: 2px 10px;
+                                 text-align: left;
+                                 font-size: 17px;
+}
+.admin-body th { background-color: #f7f7f7;
+                 font-weight: bold;
+}
+.admin-body form input, .admin-body form textarea, .admin-body form select
+{ width: 100%;
+  padding: 8px;
+  margin: 6px 0 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.admin-body .btn, .admin-body td form button { display: inline-block;
+                                               width: 70px;
+                                               height: 32px;
+                                               margin: 5px 0;
+                                               background-color: #111;
+                                               color: #fff;
+                                               border: none;
+                                               border-radius: 4px;
+                                               text-align: center;
+                                               line-height: 32px;
+                                               font-size: 14px;
+                                               cursor: pointer;
+                                               text-decoration: none;
+                                               vertical-align: middle;
+}
+.admin-body .btn:hover, .admin-body td form button:hover { background-color: #444;
+}
+.admin-body td .btn + form, .admin-body td form + .btn, .admin-body td form + form { margin-left: 8px;
+}
+
+.admin-body .movies-table td { vertical-align: middle;
+}
+.admin-body .movies-table td .btn,
+.admin-body .movies-table td form button { display: block;
+                                           margin: 5px 0;
+}
+.admin-body .movies-table td .btn + form, 
+.admin-body .movies-table td form + .btn,
+.admin-body .movies-table td form + form { margin-left: 0;
+}
+.admin-body .edit-btn { background-color: #007bff;
+}
+.admin-body .edit-btn:hover { background-color: #0056b3;
+}
+.admin-body .delete-btn { background-color: #dc3545;
+}
+.admin-body .delete-btn:hover { background-color: #a71d2a;
+}
+.admin-body .msg { display: inline-block;
+                   padding: 10px 12px;
+                   border-radius: 4px;
+                   margin-bottom: 16px;
+                   font-weight: bold;
+                   width: auto;
+}
+.admin-body .msg.ok { background: #e0f5e5;
+                      color: #2d7a38;
+}
+.admin-body .msg.err { background: #fce4e4;
+                       color: #a94442;
+}

@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# PHP / server
+*.log
+vendor/
+
+# Local env / secrets (if you split these out of dbconnect.php later)
+.env
+config.local.php
