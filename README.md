@@ -1,6 +1,6 @@
 # Movie Ticket Booking Web App
 
-A full-stack web application for browsing movies, selecting showtimes and seats, and booking tickets. Built for NTU Module IE4727 (Web Application Design).
+A full-stack web application for browsing movies, selecting showtimes and seats, and booking tickets.
 
 ## Overview
 
@@ -53,4 +53,6 @@ movie-ticket-webapp/
 
 ## Team
 
-Built as a team project for IE4727 — Web Application Design, NTU (Aug–Dec 2025).
+Apichart Yapakdee ( apichart001@e.ntu.edu.sg)
+
+Krystal Goh Yu Xin( kgoh050@e.ntu.edu.sg)
