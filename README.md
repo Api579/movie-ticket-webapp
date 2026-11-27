@@ -1,8 +1,11 @@
-# Movie Ticket Booking Web App
+# Movie Ticket Booking platform
 
-A full-stack web application for browsing movies, selecting showtimes and seats, and booking tickets.
+Full-stack web application using classic stack (HTML/CSS/Javascript/PHP/MySQL) for:
+- Browsing movies
+- Selecting showtimes and seats
+- Booking tickets
 
-## Overview
+## Stack Overview
 
 - **Front-end:** HTML, CSS, JavaScript
 - **Back-end:** PHP
@@ -10,12 +13,17 @@ A full-stack web application for browsing movies, selecting showtimes and seats,
 
 ## Features
 
-- User signup / login / logout
-- Browse movies and showtimes
-- Seat selection
-- Shopping cart and booking confirmation
-- Admin panel for managing movies and showtimes
-- Email confirmation on booking
+- Users:
+    - register account: signup, login, logout
+    - browse movies and showtimes
+    - select seats
+    - buying tickets
+    - booking receipt, and email confirmation
+- Admin panel:
+  - manages movies
+  - manages showtimes
+  - manages user accounts
+
 
 ## Project structure
 
@@ -43,16 +51,10 @@ movie-ticket-webapp/
 
 ## Setup
 
-1. Install a local PHP + MySQL environment (e.g. [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info/)).
-2. Create the database by running `database.sql`, then populate sample data with `insert.sql`.
-3. Update the credentials in `dbconnect.php` to match your local MySQL setup (see note below).
-4. Place the project folder in your server's document root (e.g. `htdocs` for XAMPP) and start Apache + MySQL.
-5. Visit `http://localhost/movie-ticket-webapp/home.php` in your browser.
+1. Install PHP & MySQL local environment (can use: [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info/)).
+2. Create database by running `database.sql`, and populate with sample data using `insert.sql`.
+3. Update credentials with `dbconnect.php` to match local MySQL setup (see notes).
+4. Place project folder within the server's document root (`htdocs` for XAMPP) then start Apache and MySQL.
+5. Finally visit `http://localhost/movie-ticket-webapp/home.php` in browser.
 
-> **Note:** `dbconnect.php` currently contains default local development credentials (root user, empty password). Do not use these values, or commit real credentials, in a production deployment — use environment variables or a config file excluded via `.gitignore` instead.
-
-## Team
-
-Apichart Yapakdee ( apichart001@e.ntu.edu.sg)
-
-Krystal Goh Yu Xin( kgoh050@e.ntu.edu.sg)
+> **Note:** `dbconnect.php` contains default local development credentials: root user, empty password. Do not use these values or commit real credentials, in production deployment — use environment variables, or a config file excluded via `.gitignore` instead.
