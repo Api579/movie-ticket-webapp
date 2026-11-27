@@ -52,9 +52,9 @@ movie-ticket-webapp/
 ## Setup
 
 1. Install PHP & MySQL local environment (can use: [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info/)).
-2. Create database by running `database.sql`, and populate with sample data using `insert.sql`.
+2. Create database by running `database.sql`, and then populate with sample data using `insert.sql`.
 3. Update credentials with `dbconnect.php` to match local MySQL setup (see notes).
 4. Place project folder within the server's document root (`htdocs` for XAMPP) then start Apache and MySQL.
 5. Finally visit `http://localhost/movie-ticket-webapp/home.php` in browser.
 
-> **Note:** `dbconnect.php` contains default local development credentials: root user, empty password. Do not use these values or commit real credentials, in production deployment — use environment variables, or a config file excluded via `.gitignore` instead.
+> **Notes:** `dbconnect.php` contains default local credentials: root user, empty password. Do not use these values or commit real credentials, in production deployment — use environment variables, or a config file excluded via `.gitignore` instead.
